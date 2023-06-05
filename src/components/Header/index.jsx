@@ -3,25 +3,21 @@ import { Container,Logo, OptionsGrid, SpanGrid } from './styles';
 
 
 
-const Header = () => {
+const Header = ({ handleScrollToAbout, handleScrollToDegree, handleScrollToProjects, handleScrollToLinks}) => {
     const optionsList = [
-        {text:"Sobre mim",direction:'about'},
-        {text:"Formação",direction:'degree'},
-        {text:"Meus Projetos",direction:'projects'},
-        {text:"Links úteis",direction:'links'},
+        {text:"Sobre mim",direction:handleScrollToAbout},
+        {text:"Formação",direction:handleScrollToDegree},
+        {text:"Meus Projetos",direction:handleScrollToProjects},
+        {text:"Links úteis",direction:handleScrollToLinks},
     ]
 
-    function slideTo(direction){
-        console.log(direction)
-    }
-    
     return (
         <Container>
             <div className="flex-row flex-center">
                 <Logo src="./logo.png" alt="test"/>
                     <OptionsGrid>
                         {optionsList.map((option) => (
-                            <SpanGrid onClick={slideTo(option.direction)}>{option.text}</SpanGrid>
+                            <SpanGrid onClick={option.direction}>{option.text}</SpanGrid>
                         ))}
                 </OptionsGrid>
             </div>
