@@ -14,10 +14,10 @@ const Grid = styled.div`
     align-items: center;
 `
 const ImageOfMe = styled.img`
+    margin-top: 30px;
     margin-left: 200px;
-    height: 350px;
-    width: 290px;
-    border-radius: 100%;
+    height: 390px;
+    width: 350px;
 `
 
 const SpanAbout = styled.span`

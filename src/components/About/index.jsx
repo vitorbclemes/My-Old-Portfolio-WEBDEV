@@ -31,7 +31,7 @@ const About = () => {
                     <SiGit size={30} style={{marginLeft:"15px"}}/>
                 </div>
             </Grid>
-            <ImageOfMe src='me.jpeg' alt='me'/>
+            <ImageOfMe src='me.png' alt='me'/>
         </Container>
      );
 }
