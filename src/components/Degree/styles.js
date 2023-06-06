@@ -15,19 +15,12 @@ const Grid = styled.div`
     margin-left: 150px;
 `
 
-const SpanDegree = styled.a`
+const SpanDegree = styled.span`
     font-size: 21px;
     text-align: center;
     color: #EDEBEB;
     line-height:1.8;
-    cursor: pointer;
-    & :hover{
-        text-decoration: underline;
-        text-decoration-color: #EDEBEB;
-    }
 `
-
-
 export {
     Container,
     Grid,
