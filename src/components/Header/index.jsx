@@ -17,7 +17,7 @@ const Header = ({ handleScrollToAbout, handleScrollToDegree, handleScrollToProje
                 <Logo src="./logo.png" alt="test"/>
                     <OptionsGrid>
                         {optionsList.map((option) => (
-                            <SpanGrid onClick={option.direction}>{option.text}</SpanGrid>
+                            <SpanGrid key={option.text} onClick={option.direction}>{option.text}</SpanGrid>
                         ))}
                 </OptionsGrid>
             </div>
