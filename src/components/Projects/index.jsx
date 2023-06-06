@@ -58,6 +58,12 @@ const Projects = () => {
             description:"Durante 3 anos, fiz parte da associação responsável por organizar a gestão esportiva da faculdade. Nesse tempo, assumi cargos como Diretor Financeiro e Presidente. Lidei com organização de eventos, gestão de pessoas e interconexão direção-alunos, evolui minha capacidade de liderança e expandi minhas redes de contatos.",
             tag:'atl',
         },
+        {
+            title:"Meu Portifólio",
+            description:"Apenas o site que você está vendo agora :)\nFoi utilizado ReactJS para implementação e hosteado no Github. ",
+            tag:'portfolio',
+            repo:"https://github.com/vitorbclemes/my-portfolio"
+        },
     ]
 
     function handleSelectedChange(event){
