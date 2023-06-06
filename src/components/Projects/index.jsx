@@ -1,10 +1,9 @@
-import React,{useRef, useState} from 'react';
+import React,{useState} from 'react';
 import { Container, DescriptionContainer, GithubButton, ProjectInput } from './styles';
 import { FaGithub } from "react-icons/fa"
 
 const Projects = () => {
     const [selectedProject,setSelectedProject] = useState("");
-    const textRef = useRef(null)
     const allProjects = [
         {
             title:"Aplicativo Interlaje",
@@ -58,14 +57,13 @@ const Projects = () => {
 
     function handleSelectedChange(event){
         setSelectedProject(event.target.value)
-        textRef.current.scrollIntoView({ behavior: 'smooth', block:'start', inline: 'nearest' });
     }
 
     function tryRenderProject(){
         let project = allProjects.find(project=>project.tag === selectedProject);
         if(project && project.repo){
             return(
-                <DescriptionContainer ref={textRef}>
+                <DescriptionContainer >
                     <span>{project.description}</span>
                     <GithubButton href={project.repo} target='_blank'>
                         <FaGithub />
@@ -76,11 +74,17 @@ const Projects = () => {
         }
         else if(project && !project.repo){
             return(
-                <DescriptionContainer ref={textRef}>
+                <DescriptionContainer >
                     <span>{project.description}</span>
                 </DescriptionContainer>
             )
+        }
+        else{
+            return(
+                <div ></div>
+            )
         };
+
     }
 
     return (
@@ -91,7 +95,6 @@ const Projects = () => {
                 <option style={{textAlign:"center"}} key={project.title} value={project.tag}>{project.title}</option>
             ))}
         </ProjectInput>
-        <div ref={textRef}></div>
         {tryRenderProject()}
 
     </Container>
